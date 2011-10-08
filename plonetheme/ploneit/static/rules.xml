@@ -6,14 +6,6 @@
     <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
     <prepend content='/html/head' theme='/html/head' />
     <copy attributes="class dir" css:theme="body" css:content="body"/>
-    <prepend content='/html/body' theme='/html/body' />
-
-    <!--append theme="/html/head">
-        <link href="/++theme++plonetheme.ploneit/ploneCustom.css"
-            media="screen"
-            type="text/css"
-            rel="stylesheet" />
-    </append-->
 
     <append theme="/html/head">
         <link href="/++theme++plonetheme.ploneit/plone-integration.css"
@@ -22,8 +14,59 @@
             rel="stylesheet" />
     </append>
 
+    <replace css:theme="#portal-top" css:content="#portal-top" />
+    <replace css:theme="#portal-columns" css:content="#portal-columns" />
+    <copy css:content="#footer-portlets" css:theme="#footer-portlets" />
+    <copy css:theme="#footer-licence" css:content="#portal-footer div"/>
+
     <replace css:content="#portal-logo img">
         <img width="400" height="71" title="" alt="" src="/++theme++plonetheme.ploneit/logo.png" />
     </replace>
+
+
+    <!-- <prepend content='/html/body' theme='/html/body' /> -->
+
+    <!--append theme="/html/head">
+        <link href="/++theme++plonetheme.ploneit/ploneCustom.css"
+            media="screen"
+            type="text/css"
+            rel="stylesheet" />
+    </append-->
+    
+    <!-- <prepend css:content="#viewlet-below-content">
+        <xsl:attribute name="class">
+           pippo e pluto
+        </xsl:attribute>
+    </prepend> -->
+
+
+    <!-- 
+    <prepend css:theme="body">
+        <xsl:attribute name="class">
+          pippo e pluto
+        </xsl:attribute>
+    </prepend> -->
+
+    <!-- <replace css:content="#portlets-below">
+        <div class="submit">
+            <h1>ti odio!!!!</h1>
+        </div>
+    </replace> -->
+
+    <!-- <prepend theme="/html/body" 
+          css:if-content="">
+          <xsl:attribute name="class">
+            <xsl:value-of css:attribute="class"/> cell position-0 width-6</xsl:attribute>
+    </prepend> -->
+    <!-- <copy css:theme="">
+      <xsl:attribute name="class">portletsBelowContentA </xsl:attribute>
+    </copy> -->
+
+<!-- portletsBelowContentB
+portletsBelowContentC -->
+
+<!-- 
+cell position-11 width-5 
+cell position-11 width-5  -->
 
 </rules>
