@@ -3,15 +3,10 @@
 /*  (do not remove this :) */
 /*  (not this either :) */
 
-a{
- color: #0089D9;
-}
-
-.state-published{
-color: #0089D9 !important;
-}
-dl.portlet {
-    font-size: 74%;
+body {
+   background-color: white;
+   color: #383D3F;
+/*   font-family: "Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif*/
 }
 
 #visual-portal-wrapper{
@@ -19,12 +14,62 @@ dl.portlet {
  margin:0 auto;
 }
 
+/*** TYPO ***/
+code, tt {
+    background-color: #0089D9;
+    color:#FFF;
+    font-family: Monaco,"Courier New",Courier,monospace;
+    font-size: 120%;
+    padding: 0 0.1em;
+}
+
+pre {
+ background-color:#DEDEDE;
+ border:1px solid #CACACA;
+ color:#005382;
+ font-weight: bold;
+ font-family:Monaco,"Courier New",Courier,monospace;
+ font-size:100%;
+ overflow:auto;
+ padding:1em;
+ width:50em;
+}
+
+h1, h2, h3, h4, h5, h6 {color: #383D3F}
+
+#content a:link,
+dl.portlet a:link,
+a:link, a:visited,
+a,
+a:visited {
+ color: #0089D9;
+}
+dl.portlet a,
+dl.portlet a:visited,
+dl.portlet a:link {
+    text-decoration: none;
+    border:0;
+}
+
+.state-published{
+color: #0089D9 !important;
+}
+
+/*** SEARCH ***/
+input.searchField {
+    -moz-appearance: textfield;
+}
+
 #searchGadget {
  border: 1px solid #CACACA;
+ height: 1.5em;
+ padding-left: 0.5em;
 }
+
 #portal-searchbox { 
-    width: 22em;
-    height: 8em;
+    position: relative;
+    text-align: left;
+    top: 26px
 }
 
 input.searchButton, form.searchPage input.searchButton {
@@ -37,13 +82,34 @@ input.searchButton, form.searchPage input.searchButton {
     font-size:76%;
 }
 
+.searchSection, #siteaction-credits {
+    display: none;
+}
+
+.searchSection,
+#siteaction-credits  {
+display:none;
+}
+
+/*** GLOABL NAV ***/
+ul#portal-globalnav  {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    font-weight: normal;
+    margin: 0 0 0 0.9em;
+    padding: 1em 0;
+    text-align: left;
+}
+
+
 #portal-globalnav li a {
  background: none repeat scroll 0 0 transparent;
  color: #747476;
  text-transform: uppercase;
  padding:0;
  min-width: 0px;
- font-weight:bold;
+ font-size: 115%;
+ font-weight:normal;
 }
 #portal-globalnav li{
  border-left: 1px solid #747476;
@@ -52,32 +118,77 @@ input.searchButton, form.searchPage input.searchButton {
 #portal-globalnav li:first-child{
  border-left:0px;
 }
-ul#portal-globalnav {
- background:transparent;
-}
 #portal-globalnav .selected a, #portal-globalnav a:hover{
  background:transparent;
  color: #0089D9;
  text-decoration:underline;
 }
-
-.searchSection, #siteaction-credits {
-    display: none;
-}
+/*** PLONE SPPECIFIC DIVS ***/
+#content {
+margin: 1em 0.25em 1em 0.25em}
 
 #portal-logo {
  margin-top:0.6em;
- margin-bottom:2em;
+ margin-bottom: 0em;
 }
 
-/***PORTLET***/
-.portletHeader {
-    text-transform: uppercase;
+#portal-logo img {
+    margin: 10px 0em 20px 27px;
 }
+
+
+#portal-siteactions a,
+#portal-siteactions a:visited {
+   font-size: 89%;
+   color: #747476;
+}
+
+#portal-siteactions {
+   margin-right: 4.7em;
+}
+
+#portal-breadcrumbs {
+    font-size: 75%;
+    margin-left: 2em;
+}
+
+.section-new-home-page #portal-breadcrumbs {
+    display: none;
+}
+#portal-personaltools {
+    padding-right: 3.5em;
+}
+
+/***PORTLETS***/
+div.managePortletsLink, a.managePortletsFallback {
+    font-size: 70%;
+    margin: 0;
+    padding: 0.1em 0.5em;
+}
+.manageFooterPortletsLink a.managePortletsFallback {
+    font-size: 80%;
+    border: 1px solid white;
+    background: none;
+    padding: 0.1em 0.5em;
+}
+
+.managePortletsBelowLink {
+    margin: 0.3em 0;
+}
+.portlet {
+    font-size: 1em;
+}
+
+dl.portlet dt, div.portletAssignments div.portletHeader {
+    font-size: 130%;
+    padding: 0.42em 1em 0
+}
+
 .portletHeader a {
  color: #383D3F;
  font-weight:normal;
 }
+
 dl.portlet dt, div.portletAssignments div.portletHeader {
     background: none repeat scroll 0 0 transparent;
 }
@@ -85,17 +196,9 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem {
     border-bottom: 0px;
     padding: 0em 1em;
 }
-.navTreeItem a:hover, dd.portletItem .navTreeItem:hover {
- background-color: #0089D9;
-}
-.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
- color: #ffffff !important;
-}
 
-dl.portlet ul.navTree .navTreeCurrentItem {
- background-color: #0089D9;
- border-left: 1em solid #0089D9;
- color:#FFF !important;
+#portal-column-one .portletItem {
+    padding-left: 0px;
 }
 
 .portletFooter a {
@@ -109,25 +212,78 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     border: none !important;
 }
 
-.portletNews .portletHeader {
+/*.portletNews .portletHeader {
     background: url("images/contenttypes-sprite.png") no-repeat scroll 0 -1292px transparent;
     padding-left: 18px;
 }
+*/
+dl.portlet dd.portletItem,
+dl.portlet dd.portletFooter,
+dl.portletError dd  {
+    padding: 0 0 1em 1.5em;
+}
+
+.portletItemDetails {
+    margin-left: 0;
+    padding: 0.2em 0;
+    color:#696969;
+    display:block;
+    font-style:italic;
+    text-align: left;
+}
+
+.portletFooter a:visited {
+    color: Orange;
+}
+
+#footer-portlets li {
+    display: block;
+}
+/***NAVIGATION***/
+
+.navTreeItem a:hover, dd.portletItem .navTreeItem:hover {
+ background-color: #0089D9;
+}
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
+ color: #ffffff !important;
+}
+
+dl.portlet ul.navTree .navTreeCurrentItem {
+ background-color: #0089D9;
+ border-left: 1em solid #0089D9;
+ color:#ffffff !important;
+}
+
+.portletNavigationTree .portletItem {
+    padding: 0;
+}
+
+.navTreeItem a, dd.portletItem .navTreeItem a {
+    border: none !important;
+}
+
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
+    color: #ffffff !important;
+    border: none !important;
+}
 
 /***FOOTER***/
-
 #portal-footer {
     background: none repeat scroll 0 0 #0089D9;
+    border-top:1px solid #004488;
+    padding: 1em 0;
+    margin: 2.5em 0 0;
+    color: white;
+    text-align:left;
+    border-radius:0.5em 0.5em 0 0;
+    -moz-border-radius:0.5em 0.5em 0 0;
+    -webkit-border-radius: 0.5em 0.5em 0 0;
+}
+#portal-footer p {
+   margin: 0pt; 
 }
 #portal-footer a{
  color:#FFF;
-}
-
-#portal-footer {
-  border-top:1px solid #004488;
-  height:18em;
-  padding:1em 4em;
-  text-align:left;
 }
 #portal-footer h3 { 
   color: white;
@@ -138,15 +294,20 @@ dl.portlet ul.navTree .navTreeCurrentItem {
   list-style-type:none;
   padding-left: 0.5em
 }
-#portal-footer .cell {
-  float: left;
-  width: 12em;
-  padding: 0 1em;
-}
+
+#footer-licence {clear: both}
 #portal-footer #site-about {
   font-size: 80%;
   width: 24em;
 }
+
+.cc-license {
+ font-size:90%;
+ margin-top:0.5em;
+ text-align:center;
+}
+
+.cc-license img {margin: 0px 10px -1px 0}
 
 /***CONTENT_TYPES***/
 .icons-on .contenttype-folder,
@@ -183,99 +344,208 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 
 /***CONTENT***/
 
-#content h1.documentFirstHeading {
- font-weight:normal;
- font-size: 200%;
+.documentFirstHeading {
+    color: #444444;
 }
+
+.documentContent li {
+    margin-left: 3em;
+}
+
+.documentDescription {
+   margin: 1em 0;
+   font-size: 1.5em;
+   font-weight: normal;
+}
+
 .documentActions {
     float: right;
     margin-right: 1em;
     text-decoration: none;    
+    font-size: 1.2em;
 }
 .documentActions li {
     list-style: none;
     display: inline;
     margin-left: 1em;
+    margin-right: 1em;
+    float: right;
+    text-decoration: none;    
+}
+
+.div-highlight {
+ background-color:#EFF0F1;
+ padding:2px 10px;
+ margin:0 7px 7px;
+ border-radius:0.5em;
+ -moz-border-radius:0.5em;
+ -webkit-border-radius: 0.5em;
+}
+
+.div-highlight .help {
+background:url("images/help.png") no-repeat scroll 0 0 transparent;
+height:75px;
+padding-left:75px;
+}
+
+.div-highlight .books {
+background:url("images/book.png") no-repeat scroll 0 0 transparent;
+height:75px;
+padding-left:75px;
+}
+
+.div-highlight .tutorials {
+background:url("images/tutorials.png") no-repeat scroll 0 0 transparent;
+padding-left:75px;
+}
+.div-highlight .tutorials ul {
+list-style:none outside none;
+}
+
+.div-highlight .tutorials li {
+ margin-left: 0.2em
+}
+
+.tileImage {
+    float: right;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.tileItem {
+    padding-bottom: 1.5em;
+}
+
+.documentByLine {
+    color: #696969;
+}
+
+.image-right {
+    float: right;
+    padding: 1em;
+}
+
+.eventDetails {
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    border: 1px solid #696969;
+    background-color: #F3F3F3;
+}
+
+/*** HOME ***/
+#home-banner h1 {
+    font-size: 1.8em;
+    color: white;
+}
+#home-banner h3 {
+    line-height: normal;
+}
+
+#home-banner h3 {
+    font-size: 1.1em;
+}
+#home-banner p {
+    font-size: 90%;
+}
+#home-banner {
+    height:300px;
+}
+
+#home-banner a,
+#home-banner a:visited,
+#home-banner a:hover {
+color: white !important;
+}
+
+#home-banner a,
+#home-banner a:visited {
+    float: right;
+    padding-right: 16px;
+    background: url("images/arrow.gif") no-repeat scroll right 3px transparent;
+    font-size: 1.6em;
+    border: 0 !important;
+    margin-top: 125px;
+    font-weight:bold;
+    text-decoration:none;
 }
 
 .splash {
-    background:url("images/frontpage-image.png") no-repeat scroll 0 115px #9CB819;
+    background:url("images/frontpage-image.png") no-repeat scroll 0 165px #9CB819;
     color: #383D3F;
-    font-family:"Helvetica Neue",Arial,FreeSans,sans-serif;
     font-size: 110%;
     margin-bottom:1em;
-    padding:1em 1.5em 5px;
+    padding:1em 1.5em 2em;
     display: block;
+    border-radius:0.5em;
     -moz-border-radius:0.5em;
     -webkit-border-radius: 0.5em;
 }
-#home-banner a {
-    float: right;
-/*    color: #383D3F; */
-    margin-top: 5em;
-    border:medium none;
-    text-decoration:none;
-    font-size:1.375em;
-    font-weight:bold;
-    padding-left:16px;
-    padding-right: 16px;
-    color:white !important;
-	border-bottom:0px !important;
-    text-shadow:1px 2px #424242;
-    background: url("images/arrow.gif") no-repeat scroll right 3px transparent;
-}
 
-div.grid-cell {
-  float: left;
-  left:100%;
-  position: relative;
-}
-#portlet-banner{
-    width: 14.5em;
-    margin-top:1em;
-}
-
-a.download {
-    background: url("images/download-plone.png") no-repeat scroll center top white;
-    clear: both;
-    color: white !important;
-    display: block;
-    font-size: 128%;
-    height: 43px;
-    line-height: 40px;
-    margin: 27px 0 0;
-    padding: 1px 10px 0 46px;
-}
-
-#banner-scopri-wrapper p a,
-#banner-scopri-wrapper p a:visited,
-#banner-scopri-wrapper p a:hover {
-    color: white;
-    font-style: italic;
-    text-decoration: none;
-    text-shadow: 1px 2px #424242;
-}
-code, tt {
-    background-color: #0089D9;
-    color:#FFF;
-    font-family: Monaco,"Courier New",Courier,monospace;
-    font-size: 120%;
-    padding: 0 0.1em;
-}
-
+/*** END HOME ***/
 
 .external_plonesite {
-  background-image: url("images/ico_link.gif") no-repeat scroll 0 0 transparent;
+  background-image: url("images/ico_link.gif");
   background-repeat: no-repeat;
   padding-left: 20px;
 }
 
-#portlet-scopri-wrapper, #portlet-home-wrapper {
+
+#portlet-banner{
+    margin-top:1em;
+}
+
+#portlet-scopri-wrapper {
     clear: both;
     float: none;
     margin: 0;
     padding: 0.2em 4.7em 0;
 }
 
-/*  */
+#portlets-right-group {
+    padding: 1em 1em 0 0;
+    background-color:#EFF0F1;
+    border-radius:0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+#plone-sites-box {
+    padding-left: 1em;
+    margin-ftop: 1em;
+    font-size: 80%;
+}
+#plone-sites-box h2 {
+    font-size: 150%;
+    font-weight: normal;
+    margin-top: 0.6em;
+}
+#plone-sites-box p {
+    margin-left: 0.5em;
+}
+
+
+
+#portlets-scopri-right {
+    width:545px;
+    background-color:#EFF0F1;
+    border-radius:0.5em;
+    -moz-border-radius:0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+.twitter-link,
+.rss-link {
+     line-height: 27px;
+}
+.twitter-link a,
+.rss-link a {
+     padding: 5px 0 5px 20px;
+     background: transparent url("images/twitter_icon.gif") 0px 5px no-repeat;
+}
+.rss-link a {
+    background: transparent url("images/rss_icon.png") 0px 5px no-repeat;
+}
+
 }
