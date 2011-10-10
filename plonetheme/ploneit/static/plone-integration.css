@@ -197,11 +197,9 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
 dl.portlet dt, div.portletAssignments div.portletHeader {
     background: none repeat scroll 0 0 transparent;
 }
-dl.portlet ul.navTreeLevel0 > .navTreeItem {
-    border-bottom: 0px;
-    padding: 0em 1em;
+#portal-column-one {
+ padding-top: 1em;   
 }
-
 #portal-column-one .portletItem {
     padding-left: 0px;
 }
@@ -244,34 +242,39 @@ dl.portletError dd  {
 #footer-portlets li {
     display: block;
 }
-/***NAVIGATION***/
-
-.navTreeItem a:hover, dd.portletItem .navTreeItem:hover {
- background-color: #0089D9;
+#footer-portlets a:hover {
+    border-bottom: 1px solid #ffffff;
 }
-.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
- color: #ffffff !important;
+/***NAVIGATION***/
+dl.portlet ul.navTreeLevel0 > .navTreeItem {
+  padding:0;
+  margin: 0;
+}
+
+dl.portlet ul.navTreeLevel1 .navTreeItem {
+ padding-left: 0.9em;
 }
 
 dl.portlet ul.navTree .navTreeCurrentItem {
- background-color: #0089D9;
- border-left: 1em solid #0089D9;
- color:#ffffff !important;
+    background: transparent;
+    border: 0;
+    margin:0;
+    padding: 0.25em 1em;
 }
 
-.portletNavigationTree .portletItem {
-    padding: 0;
+dl.portlet ul.navTree li {
+    margin-bottom:0;
 }
 
-.navTreeItem a, dd.portletItem .navTreeItem a {
-    border: none !important;
+dl.portlet ul.navTree li a {
+  padding: 0.25em 1em;
 }
 
-.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
-    color: #ffffff !important;
-    border: none !important;
+dl.portlet ul.navTree .navTreeCurrentItem,
+dl.portlet ul.navTree li a:hover {
+  background-color: #0089D9;
+  color: #ffffff !important;
 }
-
 /***FOOTER***/
 #portal-footer {
     background: none repeat scroll 0 0 #0089D9;
@@ -294,6 +297,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
   color: white;
   font-size: 140%;
   font-weight: normal;
+  border-bottom: 1px solid #ffffff;
 }
 #portal-footer ul {
   list-style-type:none;
@@ -324,7 +328,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 .icons-on .contenttype-document,
 .icons-on #plone-contentmenu-factories .contenttype-document{
- background: url("images/contenttypes-sprite.png") no-repeat scroll 0 4px transparent;
+ background: url("images/contenttypes-sprite.png") no-repeat scroll 0 8px transparent;
 }
 .icons-on .contenttype-link,
 .icons-on #plone-contentmenu-factories .contenttype-link{
@@ -443,6 +447,13 @@ list-style:none outside none;
 }
 
 /*** HOME ***/
+
+#portlet-banner a:link,
+#portlet-banner a:visited,
+#portlet-banner a {
+    border: 0;
+}
+
 #home-banner h1 {
     font-size: 1.8em;
     color: white;
@@ -465,6 +476,7 @@ list-style:none outside none;
 #home-banner a:visited,
 #home-banner a:hover {
 color: white !important;
+border: 0;
 }
 
 #home-banner a,
@@ -484,6 +496,10 @@ color: white !important;
 #content div.splash a {
     color: #383D3F;
     border:0;
+}
+
+#content div.splash a:hover {
+    color: #ffffff !important;
 }
 
 .splash {
@@ -621,7 +637,7 @@ text-shadow:2px 2px 0.2em #CCCCCC;
 }
 
 #portlets-scopri-center {
-    padding: 1em 0 0 1em;
+    padding: 1.3em 0 0 1em;
 }
 
 #portlets-scopri-center li {
@@ -662,3 +678,86 @@ padding-left:18px;
 #portlets-scopri-right .scopri a {
     border:0;
 }
+
+
+/** BANNER SCOPRI ***/
+#banner-scopri-wrapper {
+  background-color: #9CB819;
+  border-radius:0.5em;
+  -moz-border-radius:0.5em;
+  -webkit-border-radius: 0.5em;
+  overflow: hidden;
+  margin-bottom:2em;
+  width:100%;
+}
+
+.carousel-text {background: transparent}
+
+.carousel-pager {
+    position: absolute;
+    top: 0;
+    right: 20px
+}
+
+.carousel-pager a {
+    background: url("images/new-navigator.gif") no-repeat scroll 0 -10px transparent;
+    display: block;
+    float: left;
+    height: 10px;
+    overflow: hidden;
+    padding: 10px;
+    width: 11px;
+    padding:0;
+    margin-left: 5px;
+}
+.carousel-pager a span {
+    padding:20px;
+}
+.carousel-pager a.carousel-pager-item-active {
+    background: url("images/new-navigator.gif") no-repeat scroll 0 0px transparent;
+}
+
+.carousel-image {
+    position:absolute;
+    bottom: 0;
+    right: 10px;}
+
+.carousel-text {
+    top: 10px;
+}
+
+#banner-scopri-wrapper .carousel-body {
+  font-size:160%;
+  width:75%;
+  padding:0;
+   padding: 0 0 0 20px
+}
+#banner-scopri-wrapper .carousel-body p {
+   padding: 0 0 0 38px;
+}
+
+#banner-scopri-wrapper p a,
+#banner-scopri-wrapper p a:visited,
+#banner-scopri-wrapper p a:hover {
+color: white !important;
+font-style:italic;
+text-decoration:none;
+text-shadow:1px 2px #424242;
+}
+
+#banner-scopri-wrapper .scopri {
+ font-size: 60%;
+ margin-top: 20px;
+}
+
+#banner-scopri-wrapper .scopri a {
+ background:url("images/arrow.gif") no-repeat scroll left 1px transparent;
+ padding-left: 19px;
+ margin-top: 30px;
+}
+
+#banner-scopri-wrapper p.citazione {
+   background:url("images/virgolette.gif") no-repeat scroll left top #9CB819;
+/*   padding-left: 35px;*/
+}
+
