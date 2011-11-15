@@ -144,15 +144,18 @@ margin: 1em 0.25em 1em 0.25em}
     margin: 10px 0em 20px 27px;
 }
 
+#portal-siteactions {
+    clear: none;
+    float: right;
+    font-size: 85%;
+    margin: 7px 10px;
+    padding-bottom: 0em;
+}
 
 #portal-siteactions a,
 #portal-siteactions a:visited {
    font-size: 89%;
    color: #747476;
-}
-
-#portal-siteactions {
-   margin-right: 4.7em;
 }
 
 #portal-breadcrumbs {

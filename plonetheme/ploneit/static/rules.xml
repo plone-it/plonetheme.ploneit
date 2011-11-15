@@ -14,11 +14,12 @@
             rel="stylesheet" />
     </append>
 
-    <replace css:theme="#portal-top" css:content="#portal-top" />
+    <append css:theme="#portal-top" css:content="#portal-siteactions" />
+    <append css:theme="#portal-top" css:content-children="#portal-top" />
     <replace css:theme="#portal-columns" css:content="#portal-columns" />
     <copy css:content="#footer-portlets" css:theme="#footer-portlets" />
     <copy css:theme="#footer-licence" css:content="#portal-footer div"/>
-
+    
     <replace css:content="#portal-logo img">
         <img width="400" height="71" title="" alt="" src="/++theme++plonetheme.ploneit/logo.png" />
     </replace>
