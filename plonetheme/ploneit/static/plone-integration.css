@@ -146,10 +146,13 @@ margin: 1em 0.25em 1em 0.25em}
 
 #portal-siteactions {
     clear: none;
-    float: right;
+    float: none;
+    position: absolute;
+    right: 0px;
     font-size: 85%;
     margin: 7px 10px;
     padding-bottom: 0em;
+    z-index: 10;
 }
 
 #portal-siteactions a,
