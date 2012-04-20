@@ -74,7 +74,7 @@ input.searchField {
  padding-left: 0.5em;
 }
 
-#portal-searchbox { 
+#portal-searchbox {
     position: relative;
     text-align: left;
     top: 26px
@@ -129,7 +129,7 @@ ul#portal-globalnav  {
 #portal-globalnav .selected a, #portal-globalnav a:hover,
 #portal-globalnav .selected a:hover{
  background:transparent;
- color: #0089D9; 
+ color: #0089D9;
 }
 /*** PLONE SPPECIFIC DIVS ***/
 #content {
@@ -204,7 +204,7 @@ dl.portlet dt, div.portletAssignments div.portletHeader {
     background: none repeat scroll 0 0 transparent;
 }
 #portal-column-one {
- padding-top: 1em;   
+ padding-top: 1em;
 }
 #portal-column-one .portletItem {
     padding-left: 0px;
@@ -294,12 +294,12 @@ dl.portlet ul.navTree li a:hover {
     -webkit-border-radius: 0.5em 0.5em 0 0;
 }
 #portal-footer p {
-   margin: 0pt; 
+   margin: 0pt;
 }
 #portal-footer a{
  color:#FFF;
 }
-#portal-footer h3 { 
+#portal-footer h3 {
   color: white;
   font-size: 140%;
   font-weight: normal;
@@ -375,7 +375,7 @@ dl.portlet ul.navTree li a:hover {
 .documentActions {
     float: right;
     margin-right: 1em;
-    text-decoration: none;    
+    text-decoration: none;
     font-size: 1.2em;
 }
 .documentActions li {
@@ -384,7 +384,7 @@ dl.portlet ul.navTree li a:hover {
     margin-left: 1em;
     margin-right: 1em;
     float: right;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .div-highlight {
@@ -587,7 +587,7 @@ border: 0;
     background-color:#EFF0F1;
     border-radius:0.5em;
     -moz-border-radius:0.5em;
-    -webkit-border-radius: 0.5em; 
+    -webkit-border-radius: 0.5em;
 }
 #document-toc .portletHeader {
     font-size: 110%;
@@ -596,7 +596,7 @@ border: 0;
 #content #document-toc dd {
     padding-top: 1em;
     margin:0;
-} 
+}
 
 /*** SCOPRI SPECIFIC STYLES ***/
 #content a.download {
