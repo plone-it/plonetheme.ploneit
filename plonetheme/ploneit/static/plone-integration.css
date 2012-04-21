@@ -16,7 +16,7 @@ body {
 
 /*** TYPO ***/
 code, tt {
-    background-color: #0089D9;
+    background-color: #DEDEDE;
     color:#FFF;
     font-family: Monaco,"Courier New",Courier,monospace;
     font-size: 120%;
@@ -47,9 +47,9 @@ h1, h2, h3, h4, h5, h6 {color: #383D3F}
 
 #content a:link,
 dl.portlet a:link,
-a:link, a:visited,
-a,
-a:visited {
+a:link,
+a:visited,
+a {
  color: #0089D9;
 }
 dl.portlet a,
@@ -57,6 +57,7 @@ dl.portlet a:visited,
 dl.portlet a:link {
     text-decoration: none;
     border:0;
+    color: #0089D9;
 }
 
 .state-published{
